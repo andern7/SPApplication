@@ -22,364 +22,364 @@ namespace SPApplication {
         protected global::System.Web.UI.HtmlControls.HtmlForm form;
         
         /// <summary>
-        /// firstName control.
+        /// firstNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox firstName;
+        protected global::System.Web.UI.WebControls.TextBox firstNameTextBox;
         
         /// <summary>
-        /// lastName control.
+        /// lastNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lastName;
+        protected global::System.Web.UI.WebControls.TextBox lastNameTextBox;
         
         /// <summary>
-        /// Address control.
+        /// streetAddressTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Address;
+        protected global::System.Web.UI.WebControls.TextBox streetAddressTextBox;
         
         /// <summary>
-        /// City control.
+        /// CityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox City;
+        protected global::System.Web.UI.WebControls.TextBox CityTextBox;
         
         /// <summary>
-        /// State control.
+        /// StateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox State;
+        protected global::System.Web.UI.WebControls.TextBox StateTextBox;
         
         /// <summary>
-        /// ZIP control.
+        /// ZIPTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ZIP;
+        protected global::System.Web.UI.WebControls.TextBox ZIPTextBox;
         
         /// <summary>
-        /// tel control.
+        /// telTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tel;
+        protected global::System.Web.UI.WebControls.TextBox telTextBox;
         
         /// <summary>
-        /// email control.
+        /// emailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
         
         /// <summary>
-        /// CName control.
+        /// CNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CName;
+        protected global::System.Web.UI.WebControls.TextBox CNameTextBox;
         
         /// <summary>
-        /// CAddress control.
+        /// CAddressTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CAddress;
+        protected global::System.Web.UI.WebControls.TextBox CAddressTextBox;
         
         /// <summary>
-        /// CCity control.
+        /// CCityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CCity;
+        protected global::System.Web.UI.WebControls.TextBox CCityTextBox;
         
         /// <summary>
-        /// CState control.
+        /// CStateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CState;
+        protected global::System.Web.UI.WebControls.TextBox CStateTextBox;
         
         /// <summary>
-        /// CZIP control.
+        /// CZIPTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CZIP;
+        protected global::System.Web.UI.WebControls.TextBox CZIPTextBox;
         
         /// <summary>
-        /// SupName control.
+        /// SupNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupName;
+        protected global::System.Web.UI.WebControls.TextBox SupNameTextBox;
         
         /// <summary>
-        /// SupPhone control.
+        /// SupPhoneTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupPhone;
+        protected global::System.Web.UI.WebControls.TextBox SupPhoneTextBox;
         
         /// <summary>
-        /// SupEmail control.
+        /// SupEmailTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupEmail;
+        protected global::System.Web.UI.WebControls.TextBox SupEmailTextBox;
         
         /// <summary>
-        /// OkToContact control.
+        /// OkToContactCheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox OkToContact;
+        protected global::System.Web.UI.WebControls.CheckBox OkToContactCheckBox;
         
         /// <summary>
-        /// CName2 control.
+        /// CName2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CName2;
+        protected global::System.Web.UI.WebControls.TextBox CName2TextBox;
         
         /// <summary>
-        /// CAddress2 control.
+        /// CAddress2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CAddress2;
+        protected global::System.Web.UI.WebControls.TextBox CAddress2TextBox;
         
         /// <summary>
-        /// CCity2 control.
+        /// CCity2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CCity2;
+        protected global::System.Web.UI.WebControls.TextBox CCity2TextBox;
         
         /// <summary>
-        /// CState2 control.
+        /// CState2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CState2;
+        protected global::System.Web.UI.WebControls.TextBox CState2TextBox;
         
         /// <summary>
-        /// CZIP2 control.
+        /// CZIP2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CZIP2;
+        protected global::System.Web.UI.WebControls.TextBox CZIP2TextBox;
         
         /// <summary>
-        /// SupName2 control.
+        /// SupName2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupName2;
+        protected global::System.Web.UI.WebControls.TextBox SupName2TextBox;
         
         /// <summary>
-        /// SupPhone2 control.
+        /// SupPhone2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupPhone2;
+        protected global::System.Web.UI.WebControls.TextBox SupPhone2TextBox;
         
         /// <summary>
-        /// SupEmail2 control.
+        /// SupEmail2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupEmail2;
+        protected global::System.Web.UI.WebControls.TextBox SupEmail2TextBox;
         
         /// <summary>
-        /// OkToContact2 control.
+        /// OkToContact2CheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox OkToContact2;
+        protected global::System.Web.UI.WebControls.CheckBox OkToContact2CheckBox;
         
         /// <summary>
-        /// CName3 control.
+        /// CName3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CName3;
+        protected global::System.Web.UI.WebControls.TextBox CName3TextBox;
         
         /// <summary>
-        /// CAddress3 control.
+        /// CAddress3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CAddress3;
+        protected global::System.Web.UI.WebControls.TextBox CAddress3TextBox;
         
         /// <summary>
-        /// CCity3 control.
+        /// CCity3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CCity3;
+        protected global::System.Web.UI.WebControls.TextBox CCity3TextBox;
         
         /// <summary>
-        /// CState3 control.
+        /// CState3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CState3;
+        protected global::System.Web.UI.WebControls.TextBox CState3TextBox;
         
         /// <summary>
-        /// CZIP3 control.
+        /// CZIP3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CZIP3;
+        protected global::System.Web.UI.WebControls.TextBox CZIP3TextBox;
         
         /// <summary>
-        /// SupName3 control.
+        /// SupName3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupName3;
+        protected global::System.Web.UI.WebControls.TextBox SupName3TextBox;
         
         /// <summary>
-        /// SupPhone3 control.
+        /// SupPhone3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupPhone3;
+        protected global::System.Web.UI.WebControls.TextBox SupPhone3TextBox;
         
         /// <summary>
-        /// SupEmail3 control.
+        /// SupEmail3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox SupEmail3;
+        protected global::System.Web.UI.WebControls.TextBox SupEmail3TextBox;
         
         /// <summary>
-        /// OkToContact3 control.
+        /// OkToContact3CheckBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox OkToContact3;
+        protected global::System.Web.UI.WebControls.CheckBox OkToContact3CheckBox;
         
         /// <summary>
-        /// HSName control.
+        /// HSNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HSName;
+        protected global::System.Web.UI.WebControls.TextBox HSNameTextBox;
         
         /// <summary>
-        /// HSCity control.
+        /// HSCityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HSCity;
+        protected global::System.Web.UI.WebControls.TextBox HSCityTextBox;
         
         /// <summary>
-        /// HSState control.
+        /// HSStateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HSState;
+        protected global::System.Web.UI.WebControls.TextBox HSStateTextBox;
         
         /// <summary>
-        /// HSGradYear control.
+        /// HSGradYearTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HSGradYear;
+        protected global::System.Web.UI.WebControls.TextBox HSGradYearTextBox;
         
         /// <summary>
-        /// HSGPA control.
+        /// HSGPATextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HSGPA;
+        protected global::System.Web.UI.WebControls.TextBox HSGPATextBox;
         
         /// <summary>
         /// HSGradCheckBox control.
@@ -391,40 +391,40 @@ namespace SPApplication {
         protected global::System.Web.UI.WebControls.CheckBox HSGradCheckBox;
         
         /// <summary>
-        /// CollegeName control.
+        /// CollegeNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CollegeName;
+        protected global::System.Web.UI.WebControls.TextBox CollegeNameTextBox;
         
         /// <summary>
-        /// CollegeCity control.
+        /// CollegeCityTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CollegeCity;
+        protected global::System.Web.UI.WebControls.TextBox CollegeCityTextBox;
         
         /// <summary>
-        /// CollegeState control.
+        /// CollegeStateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CollegeState;
+        protected global::System.Web.UI.WebControls.TextBox CollegeStateTextBox;
         
         /// <summary>
-        /// Major control.
+        /// MajorTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Major;
+        protected global::System.Web.UI.WebControls.TextBox MajorTextBox;
         
         /// <summary>
         /// CollegeGradCheckBox control.
@@ -436,138 +436,138 @@ namespace SPApplication {
         protected global::System.Web.UI.WebControls.CheckBox CollegeGradCheckBox;
         
         /// <summary>
-        /// CollegeGradYear control.
+        /// CollegeGradYearTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CollegeGradYear;
+        protected global::System.Web.UI.WebControls.TextBox CollegeGradYearTextBox;
         
         /// <summary>
-        /// CollegeGPA control.
+        /// CollegeGPATextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox CollegeGPA;
+        protected global::System.Web.UI.WebControls.TextBox CollegeGPATextBox;
         
         /// <summary>
-        /// RName1 control.
+        /// RName1TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RName1;
+        protected global::System.Web.UI.WebControls.TextBox RName1TextBox;
         
         /// <summary>
-        /// Relationship1 control.
+        /// Relationship1TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Relationship1;
+        protected global::System.Web.UI.WebControls.TextBox Relationship1TextBox;
         
         /// <summary>
-        /// RPhone1 control.
+        /// RPhone1TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RPhone1;
+        protected global::System.Web.UI.WebControls.TextBox RPhone1TextBox;
         
         /// <summary>
-        /// REmail1 control.
+        /// REmail1TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox REmail1;
+        protected global::System.Web.UI.WebControls.TextBox REmail1TextBox;
         
         /// <summary>
-        /// RName2 control.
+        /// RName2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RName2;
+        protected global::System.Web.UI.WebControls.TextBox RName2TextBox;
         
         /// <summary>
-        /// Relationship2 control.
+        /// Relationship2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Relationship2;
+        protected global::System.Web.UI.WebControls.TextBox Relationship2TextBox;
         
         /// <summary>
-        /// RPhone2 control.
+        /// RPhone2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RPhone2;
+        protected global::System.Web.UI.WebControls.TextBox RPhone2TextBox;
         
         /// <summary>
-        /// REmail2 control.
+        /// REmail2TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox REmail2;
+        protected global::System.Web.UI.WebControls.TextBox REmail2TextBox;
         
         /// <summary>
-        /// RName3 control.
+        /// RName3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RName3;
+        protected global::System.Web.UI.WebControls.TextBox RName3TextBox;
         
         /// <summary>
-        /// Relationship3 control.
+        /// Relationship3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Relationship3;
+        protected global::System.Web.UI.WebControls.TextBox Relationship3TextBox;
         
         /// <summary>
-        /// RPhone3 control.
+        /// RPhone3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox RPhone3;
+        protected global::System.Web.UI.WebControls.TextBox RPhone3TextBox;
         
         /// <summary>
-        /// REmail3 control.
+        /// REmail3TextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox REmail3;
+        protected global::System.Web.UI.WebControls.TextBox REmail3TextBox;
         
         /// <summary>
-        /// Button1 control.
+        /// SubmitButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button SubmitButton;
     }
 }

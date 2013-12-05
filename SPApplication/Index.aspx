@@ -13,116 +13,116 @@
     <form id="form" runat="server">
     <div id="Contact">
         <label>First Name: </label>
-        <asp:TextBox ID="firstName" runat="server"></asp:TextBox>
+        <asp:TextBox ID="firstNameTextBox" runat="server"></asp:TextBox>
         <label>Last Name: </label>
-        <asp:TextBox ID="lastName" runat="server"></asp:TextBox>
+        <asp:TextBox ID="lastNameTextBox" runat="server"></asp:TextBox>
 &nbsp;<p>
             <label>Street Address: </label>
-            <asp:TextBox ID="Address" runat="server"></asp:TextBox>
+            <asp:TextBox ID="streetAddressTextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>City: </label>
-            <asp:TextBox ID="City" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CityTextBox" runat="server"></asp:TextBox>
             <label> State: </label>
-            <asp:TextBox ID="State" runat="server"></asp:TextBox>
+            <asp:TextBox ID="StateTextBox" runat="server"></asp:TextBox>
             <label>ZIP Code: </label>
-            <asp:TextBox ID="ZIP" runat="server"></asp:TextBox>
+            <asp:TextBox ID="ZIPTextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>Phone Number: </label>
-            <asp:TextBox ID="tel" runat="server"></asp:TextBox>
+            <asp:TextBox ID="telTextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Email: </label>
-            <asp:TextBox ID="email" runat="server"></asp:TextBox>
+            <asp:TextBox ID="emailTextBox" runat="server" TextMode="Email"></asp:TextBox>
         </p>
     </div>
     <hr />
     <h2>Past Employment</h2>
         <div id="Employer1">
             <label>Company Name: </label>
-            <asp:TextBox ID="CName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CNameTextBox" runat="server"></asp:TextBox>
             <p>
             <label>Street Address: </label>
-            <asp:TextBox ID="CAddress" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CAddressTextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>City: </label>
-            <asp:TextBox ID="CCity" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CCityTextBox" runat="server"></asp:TextBox>
             <label> State: </label>
-            <asp:TextBox ID="CState" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CStateTextBox" runat="server"></asp:TextBox>
             <label>ZIP Code: </label>
-            <asp:TextBox ID="CZIP" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CZIPTextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>Supervisor Name: </label>
-            <asp:TextBox ID="SupName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupNameTextBox" runat="server"></asp:TextBox>
             <label>Supervisor Phone Number: </label>
-            <asp:TextBox ID="SupPhone" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupPhoneTextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Supervisor Email: </label>
-            <asp:TextBox ID="SupEmail" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupEmailTextBox" runat="server" TextMode="Email"></asp:TextBox>
             </p>
             <p>
                 <label>Ok to contact?</label>
-                <asp:CheckBox ID="OkToContact" runat="server" />
+                <asp:CheckBox ID="OkToContactCheckBox" runat="server" />
                 
             </p>
         </div>
     <br /><br /><br />
         <div id="Employer2">
             <label>Company Name: </label>
-            <asp:TextBox ID="CName2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CName2TextBox" runat="server"></asp:TextBox>
             <p>
             <label>Street Address: </label>
-            <asp:TextBox ID="CAddress2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CAddress2TextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>City: </label>
-            <asp:TextBox ID="CCity2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CCity2TextBox" runat="server"></asp:TextBox>
             <label> State: </label>
-            <asp:TextBox ID="CState2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CState2TextBox" runat="server"></asp:TextBox>
             <label>ZIP Code: </label>
-            <asp:TextBox ID="CZIP2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CZIP2TextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>Supervisor Name: </label>
-            <asp:TextBox ID="SupName2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupName2TextBox" runat="server"></asp:TextBox>
             <label>Supervisor Phone Number: </label>
-            <asp:TextBox ID="SupPhone2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupPhone2TextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Supervisor Email: </label>
-            <asp:TextBox ID="SupEmail2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupEmail2TextBox" runat="server" TextMode="Email"></asp:TextBox>
             </p>
             <p>
                 <label>Ok to contact?</label>
-                <asp:CheckBox ID="OkToContact2" runat="server" />
+                <asp:CheckBox ID="OkToContact2CheckBox" runat="server" />
                 
             </p>
         </div>
     <br /><br /><br />
         <div id="Employer">
             <label>Company Name: </label>
-            <asp:TextBox ID="CName3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CName3TextBox" runat="server"></asp:TextBox>
             <p>
             <label>Street Address: </label>
-            <asp:TextBox ID="CAddress3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CAddress3TextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>City: </label>
-            <asp:TextBox ID="CCity3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CCity3TextBox" runat="server"></asp:TextBox>
             <label> State: </label>
-            <asp:TextBox ID="CState3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CState3TextBox" runat="server"></asp:TextBox>
             <label>ZIP Code: </label>
-            <asp:TextBox ID="CZIP3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CZIP3TextBox" runat="server"></asp:TextBox>
         </p>
         <p>
             <label>Supervisor Name: </label>
-            <asp:TextBox ID="SupName3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupName3TextBox" runat="server"></asp:TextBox>
             <label>Supervisor Phone Number: </label>
-            <asp:TextBox ID="SupPhone3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupPhone3TextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Supervisor Email: </label>
-            <asp:TextBox ID="SupEmail3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="SupEmail3TextBox" runat="server" TextMode="Email"></asp:TextBox>
             </p>
             <p>
                 <label>Ok to contact?</label>
-                <asp:CheckBox ID="OkToContact3" runat="server" />
+                <asp:CheckBox ID="OkToContact3CheckBox" runat="server" />
                 
             </p>
         </div>
@@ -130,79 +130,81 @@
     <h2>Education</h2>
     <div id="Education">
             <label>High School Name: </label>
-            <asp:TextBox ID="HSName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="HSNameTextBox" runat="server"></asp:TextBox>
             <label>City: </label>
-            <asp:TextBox ID="HSCity" runat="server"></asp:TextBox>
+            <asp:TextBox ID="HSCityTextBox" runat="server"></asp:TextBox>
             <label>State:</label>
-            <asp:TextBox ID="HSState" runat="server"></asp:TextBox>
+            <asp:TextBox ID="HSStateTextBox" runat="server"></asp:TextBox>
             <p>
                 <label>Graduation Year: </label>
-                <asp:TextBox ID="HSGradYear" runat="server"></asp:TextBox>
+                <asp:TextBox ID="HSGradYearTextBox" runat="server"></asp:TextBox>
             <label>GPA: </label>
-                <asp:TextBox ID="HSGPA" runat="server"></asp:TextBox>
+                <asp:TextBox ID="HSGPATextBox" runat="server"></asp:TextBox>
             
                 <label>Did you graduate?</label>
                 <asp:CheckBox ID="HSGradCheckBox" runat="server" />
             </p>
-            <hr />
+            </div>
+        <h2>Post-Secondary Education</h2>
+        <div id="Education2">
             <p>
             <label>Undergraduate Institution Name:</label>
-            <asp:TextBox ID="CollegeName" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CollegeNameTextBox" runat="server"></asp:TextBox>
             </p>
-            <p>
+                <p>
             <label>City: </label>
-            <asp:TextBox ID="CollegeCity" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CollegeCityTextBox" runat="server"></asp:TextBox>
             <label> State:</label>
-            <asp:TextBox ID="CollegeState" runat="server"></asp:TextBox>
+            <asp:TextBox ID="CollegeStateTextBox" runat="server" MaxLength="20"></asp:TextBox>
             </p>
             <label>Major:</label>
            <p>
-             <asp:TextBox ID="Major" runat="server"></asp:TextBox>
-            
+             <asp:TextBox ID="MajorTextBox" runat="server"></asp:TextBox>
+            </p>
                <label>Did you graduate?</label>
                <asp:CheckBox ID="CollegeGradCheckBox" runat="server" />
             <label>Graduation Year: </label>
-                <asp:TextBox ID="CollegeGradYear" runat="server"></asp:TextBox>
+                <asp:TextBox ID="CollegeGradYearTextBox" runat="server"></asp:TextBox>
             <label>GPA: </label>
-            <asp:TextBox ID="CollegeGPA" runat="server"></asp:TextBox>
-            </p>
+            <asp:TextBox ID="CollegeGPATextBox" runat="server"></asp:TextBox>
+            
 
     </div>
     
     <h2>References</h2>
     <div id="References">
             <label>Name: </label>
-            <asp:TextBox ID="RName1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="RName1TextBox" runat="server"></asp:TextBox>
             <label>Relationship: </label>
-            <asp:TextBox ID="Relationship1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Relationship1TextBox" runat="server"></asp:TextBox>
             <label>Phone Number: </label>
-            <asp:TextBox ID="RPhone1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="RPhone1TextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Email: </label>
-            <asp:TextBox ID="REmail1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="REmail1TextBox" runat="server"></asp:TextBox>
             <p>
                 <label>Name: </label>
-            <asp:TextBox ID="RName2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="RName2TextBox" runat="server"></asp:TextBox>
             <label>Relationship: </label>
-            <asp:TextBox ID="Relationship2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Relationship2TextBox" runat="server"></asp:TextBox>
             <label>Phone Number: </label>
-            <asp:TextBox ID="RPhone2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="RPhone2TextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Email: </label>
-            <asp:TextBox ID="REmail2" runat="server"></asp:TextBox>
+            <asp:TextBox ID="REmail2TextBox" runat="server"></asp:TextBox>
             </p>
             <p>
                 <label>Name: </label>
-            <asp:TextBox ID="RName3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="RName3TextBox" runat="server"></asp:TextBox>
             <label>Relationship: </label>
-            <asp:TextBox ID="Relationship3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Relationship3TextBox" runat="server"></asp:TextBox>
             <label>Phone Number: </label>
-            <asp:TextBox ID="RPhone3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="RPhone3TextBox" runat="server" TextMode="Phone"></asp:TextBox>
             <label>Email: </label>
-            <asp:TextBox ID="REmail3" runat="server"></asp:TextBox>
+            <asp:TextBox ID="REmail3TextBox" runat="server"></asp:TextBox>
             </p>
     </div>
-    <
+    
         <p>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Submit Application" />
+            <asp:Button ID="SubmitButton" runat="server" OnClick="SubmitButton_Click1" Text="Submit Application" />
         </p>
     </form>
     </body>
