@@ -18,264 +18,215 @@ namespace SPApplication
             using (SqlConnection conn = new SqlConnection())
             {
                 conn.ConnectionString = System.Configuration.ConfigurationManager.ConnectionStrings["Conn2"].ConnectionString;
-                string sqlquery = "exec sp-insert @first_Name, @last_Name, @_address, @_city, @_state, @_tel, @_email, @college_Name, @college_City, @_major, @c_GPA, @c_Graduate, @hs_Name, @hs_City, @hs_State, @hs_GradYear, @hs_Graduate, @c_Name, @c_Address, @c_City, @c_State, @c_ZIP, @supervisor_Name, @supervisor_Phone, @supervisor_Email, @_okToContact, @r_Name, @r_Phone, @r_Email, @_relationship";
 
-                SqlCommand command = new SqlCommand(sqlquery, conn);
+                int ApplicantId = 0;
+                //Applicant Table Insert
+                //
+                string applicant_insert = "INSERT INTO [ApplicantDatabase].[dbo].[Applicant] (firstName,lastName,streetAddress,city,state,zip,phone,email)";
+                applicant_insert += "VALUES (@firstName,@lastName,@streetAddress,@city,@state,@zip,@phone,@email);";
+               
+                //Employer Table Insert
+                //
+                string employer_insert = "INSERT INTO [ApplicantDatabase].[dbo].[Company] (Company, CAddress, CCity, CState, CZIP, SupervisorName, SupervisorPhone, SupervisorEmail, OkToContact, ApplicantId)";
+                employer_insert += "VALUES(@Company, @CAddress, @CCity, @CState, @CZIP, @SupervisorName, @SupervisorPhone, @SupervisorEmail, @OkToContact, @ApplicantId)";
+               
+                //High School Table Insert
+                //
+                string education_insert = "INSERT INTO [ApplicantDatabase].[dbo].[HS] (HSName, HSCity, HSState, HSGradYear, HSGPA, HSGraduate, ApplicantId)";
+                education_insert += "VALUES(@HSName, @HSCity, @HSState, @HSGradYear, @HSGPA, @HSGraduate, @ApplicantId)";
+               
+                //College Table Insert
+                //
+                string college_insert = "INSERT INTO [ApplicantDatabase].[dbo].[College] (CollegeName, CollegeCity, CollegeState, Major, CGPA, CGraduate, CollegeGradYear, ApplicantId)";
+                college_insert += "VALUES(@CollegeName, @CollegeCity, @CollegeState, @Major, @CGPA, @CGraduate, @CollegeGradYear,  @ApplicantId)";
+                
+                //Reference Table Insert
+                string reference_insert = "INSERT INTO [ApplicantDatabase].[dbo].[References] (RName, RPhone, REmail, Relationship, ApplicantId)";
+                reference_insert += "VALUES(@RName, @RPhone, @REmail, @Relationship, @ApplicantId)";
 
 
 
-                //open the connection to the database.
+
+
+
+
+
+
+
                 conn.Open();
-                
-                //First Name
-                string FirstName = firstNameTextBox.Text;
-                command.Parameters.AddWithValue("@first_Name", FirstName);
-                //Last Name
-                string LastName = lastNameTextBox.Text;
-                command.Parameters.AddWithValue("@last_Name", LastName);
-                //Address
-                string StreetAddress = streetAddressTextBox.Text;
-                command.Parameters.AddWithValue("@street_Address", StreetAddress);
-                //City
-                string City = CityTextBox.Text;
-                command.Parameters.AddWithValue("@_city", City);
-                //ZIP
-                string zip = ZIPTextBox.Text;
-                command.Parameters.AddWithValue("@_zip", zip);
-                //Phone Number
-                string PhoneNumber = telTextBox.Text;
-                command.Parameters.AddWithValue("@_phone", PhoneNumber);
-                //Email
-                string Email = emailTextBox.Text;
-                command.Parameters.AddWithValue("@_email", Email);
-
-
-                //*************************************************************************************************
-                //Add information to the College table
-                //College Name
-                string CollegeName = CollegeNameTextBox.Text;
-                command.Parameters.AddWithValue("@college_Name", CollegeName);
-                //College City
-                string CollegeCity = CollegeCityTextBox.Text;
-                command.Parameters.AddWithValue("@college_City", CollegeCity);
-                //College State
-                string CollegeState = CollegeStateTextBox.Text;
-                command.Parameters.AddWithValue("@college_State", CollegeState);
-                //College Grad Year
-                string CollegeGradYear = CollegeGradYearTextBox.Text;
-                command.Parameters.AddWithValue("@college_GradYear", CollegeGradYear);
-                //College Graduate    
-                string Graduate;
-                if (CollegeGradCheckBox.Checked)
+                try
                 {
-                    Graduate = "Yes";
-                }
-                else
-                {
-                    Graduate = "No";
-                }
-                command.Parameters.AddWithValue("@c_Graduate", Graduate);
+                    SqlCommand cmdIns = new SqlCommand(applicant_insert, conn);
 
-                //******************************************************************************************************
-                //Insert information into the HS table. 
-                //High School Name
-                string HSName = HSNameTextBox.Text;
-                command.Parameters.AddWithValue("@hs_Name", HSName);
-                //High School City
-                string HSCity = HSCityTextBox.Text;
-                command.Parameters.AddWithValue("@hs_City", HSCity);
-                //High School State
-                string HSState = HSStateTextBox.Text;
-                command.Parameters.AddWithValue("@hs_State", HSState);
-                //High School Graduation Year
-                string HSGradYear = HSGradYearTextBox.Text;
-                command.Parameters.AddWithValue("@hs_GradYear", HSGradYear);
-                //High School Graduate? 
-                string HSGraduate;
-                if (HSGradCheckBox.Checked)
-                {
-                    HSGraduate = "Yes";
-                }
-                else
-                {
-                    HSGraduate = "No";
-                }
-                command.Parameters.AddWithValue("@hs_Graduate", HSGraduate);
+                    cmdIns.Parameters.AddWithValue("@firstName", firstNameTextBox.Text);
+                    cmdIns.Parameters.AddWithValue("@lastName", lastNameTextBox.Text);
+                    cmdIns.Parameters.AddWithValue("@streetAddress", streetAddressTextBox.Text);
+                    cmdIns.Parameters.AddWithValue("@city", CityTextBox.Text);
+                    cmdIns.Parameters.AddWithValue("@state", "WI");
+                    cmdIns.Parameters.AddWithValue("@zip", ZIPTextBox.Text);
+                    cmdIns.Parameters.AddWithValue("@phone", telTextBox.Text);
+                    cmdIns.Parameters.AddWithValue("@email", emailTextBox.Text);
 
-                //***************************************************************************************
-                //Insert information into the Employers table
-                //Employer 1 Name
-                string CName1 = CNameTextBox.Text;
-                command.Parameters.AddWithValue("@_Company", CName1);
-                //Employer 1 Address
-                string CAddress1 = CAddressTextBox.Text;
-                command.Parameters.AddWithValue("@c_Address", CAddress1);
-                //Employer 1 City
-                string CCity1 = CCityTextBox.Text;
-                command.Parameters.AddWithValue("@c_City", CCity1);
-                //Employer 1 State
-                string CState1 = CStateTextBox.Text;
-                command.Parameters.AddWithValue("@c_State", CState1);
-                //Employer 1 ZIP
-                string CZIP1 = CZIPTextBox.Text;
-                command.Parameters.AddWithValue("@c_ZIP", CZIP1);
-                //Employer 1 Supervisor Name
-                string SupervisorName = SupNameTextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Name", SupervisorName);
-                //Employer 1 Supervisor Phone Number
-                string SupervisorPhone = SupPhoneTextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Phone", SupervisorPhone);
-                //Employer 1 Supervisor Email Address
-                string SupervisorEmail = SupEmailTextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Email", SupervisorEmail);
-                //Ok to Contact?
-                string OkToContact1;
-                if (OkToContactCheckBox.Checked)
-                {
-                    OkToContact1 = "Yes";
-                }
-                else
-                {
-                    OkToContact1 = "No";
-                }
-                command.Parameters.AddWithValue("@_okToContact", OkToContact1);
-                //**************************************************************************************************
-                //Employer 2 Name
-                string CName2 = CName2TextBox.Text;
-                command.Parameters.AddWithValue("@_Company", CName2);
-                //Employer 2 Address
-                string CAddress2 = CAddress2TextBox.Text;
-                command.Parameters.AddWithValue("@c_Address", CAddress2);
-                //Employer 2 City
-                string CCity2 = CCity2TextBox.Text;
-                command.Parameters.AddWithValue("@c_City", CCity2);
-                //Employer 2 State
-                string CState2 = CState2TextBox.Text;
-                command.Parameters.AddWithValue("@c_State", CState2);
-                //Employer 2 ZIP
-                string CZIP2 = CZIP2TextBox.Text;
-                command.Parameters.AddWithValue("@c_ZIP", CZIP2);
-                //Employer 2 Supervisor Name
-                string SupervisorName2 = SupName2TextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Name", SupervisorName2);
-                //Employer 2 Supervisor Phone Number
-                string SupervisorPhone2 = SupPhone2TextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Phone", SupervisorPhone2);
-                //Employer 2 Supervisor Email Address
-                string SupervisorEmail2 = SupEmail2TextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Email", SupervisorEmail2);
-                //Ok to Contact?
-                string OkToContact2;
-                if (OkToContact2CheckBox.Checked)
-                {
-                    OkToContact2 = "Yes";
-                }
-                else
-                {
-                    OkToContact2 = "No";
-                }
-                command.Parameters.AddWithValue("@_okToContact", OkToContact2);
+                    cmdIns.ExecuteNonQuery();
+                    cmdIns.Parameters.Clear();
 
-                //********************************************************************************************
-                //Employer 3 Name
-                string CName3 = CName3TextBox.Text;
-                command.Parameters.AddWithValue("@_Company", CName3);
-                //Employer 3 Address
-                string CAddress3 = CAddress3TextBox.Text;
-                command.Parameters.AddWithValue("@c_Address", CAddress3);
-                //Employer 3 City
-                string CCity3 = CCity3TextBox.Text;
-                command.Parameters.AddWithValue("@c_City", CCity3);
-                //Employer 3 State
-                string CState3 = CState3TextBox.Text;
-                command.Parameters.AddWithValue("@c_State", CState3);
-                //Employer 3 ZIP
-                string CZIP3 = CZIP3TextBox.Text;
-                command.Parameters.AddWithValue("@c_ZIP", CZIP3);
-                //Employer 3 Supervisor Name
-                string SupervisorName3 = SupName3TextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Name", SupervisorName3);
-                //Employer 3 Supervisor Phone Number
-                string SupervisorPhone3 = SupPhone3TextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Phone", SupervisorPhone3);
-                //Employer 3 Supervisor Email Address
-                string SupervisorEmail3 = SupEmail3TextBox.Text;
-                command.Parameters.AddWithValue("@supervisor_Email", SupervisorEmail3);
-                //Ok to contact? 
-                string OkToContact3;
-                if (OkToContact3CheckBox.Checked)
-                {
-                    OkToContact3 = "Yes";
+                    cmdIns.CommandText = "SELECT @@IDENTITY";
+
+                    // Get the last inserted id.
+                    ApplicantId = Convert.ToInt32(cmdIns.ExecuteScalar());
+
+                    //
+                    //Insert into the Employers Table
+                    //Employer 1
+                    SqlCommand cmdIns1 = new SqlCommand(employer_insert, conn);
+                    cmdIns1.Parameters.AddWithValue("@Company", CNameTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@CAddress", CAddressTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@CCity", CCityTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@CState", CStateTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@CZIP", CZIPTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@SupervisorName", SupNameTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@SupervisorPhone", SupPhoneTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@SupervisorEmail", SupEmailTextBox.Text);
+                    cmdIns1.Parameters.AddWithValue("@OkToContact", OkToContactCheckBox.Checked);
+                    cmdIns1.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+           
+                    cmdIns1.ExecuteNonQuery();
+                    cmdIns1.Parameters.Clear();
+                    //Employer 2
+                    //add ApplicantId to all tables to serve as foreign key
+                    SqlCommand cmdIns2 = new SqlCommand(employer_insert, conn);
+                    cmdIns2.Parameters.AddWithValue("@Company", CName2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@CAddress", CAddress2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@CCity", CCity2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@CState", CState2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@CZIP", CZIP2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@SupervisorName", SupName2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@SupervisorPhone", SupPhone2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@SupervisorEmail", SupEmail2TextBox.Text);
+                    cmdIns2.Parameters.AddWithValue("@OkToContact", OkToContact2CheckBox.Checked);
+                    cmdIns2.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+                    cmdIns2.ExecuteNonQuery();
+                    cmdIns2.Parameters.Clear();
+                    ////Employer 3
+                    SqlCommand cmdIns3 = new SqlCommand(employer_insert, conn);
+                    cmdIns3.Parameters.AddWithValue("@Company", CName3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@CAddress", CAddress3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@CCity", CCity3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@CState", CState3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@CZIP", CZIP3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@SupervisorName", SupName3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@SupervisorPhone", SupPhone3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@SupervisorEmail", SupEmail3TextBox.Text);
+                    cmdIns3.Parameters.AddWithValue("@OkToContact", OkToContact3CheckBox.Checked);
+                    cmdIns3.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+                    cmdIns3.ExecuteNonQuery();
+                    cmdIns3.Parameters.Clear();
+                    //
+                    //Insert into the High School Table
+                    //
+                    SqlCommand cmdIns4 = new SqlCommand(education_insert, conn);
+                    cmdIns4.Parameters.AddWithValue("@HSName", HSNameTextBox.Text);
+                    cmdIns4.Parameters.AddWithValue("@HSCity", HSCityTextBox.Text);
+                    cmdIns4.Parameters.AddWithValue("@HSState", HSStateTextBox.Text);
+                    cmdIns4.Parameters.AddWithValue("@HSGradYear", HSGradYearTextBox.Text);
+                    cmdIns4.Parameters.AddWithValue("@HSGPA", HSGPATextBox.Text);
+                    cmdIns4.Parameters.AddWithValue("@HSGraduate", HSGradCheckBox.Checked);
+                    cmdIns4.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+
+                    cmdIns4.ExecuteNonQuery();
+                    cmdIns4.Parameters.Clear();
+                    
+                    //
+                    //Insert into the College Table
+                    //
+                    SqlCommand cmdIns5 = new SqlCommand(college_insert, conn);
+                    cmdIns5.Parameters.AddWithValue("@CollegeName", CollegeNameTextBox.Text);
+                    cmdIns5.Parameters.AddWithValue("@CollegeCity", CollegeCityTextBox.Text);
+                    cmdIns5.Parameters.AddWithValue("@CollegeState", CollegeStateTextBox.Text);
+                    cmdIns5.Parameters.AddWithValue("@Major", MajorTextBox.Text);
+                    cmdIns5.Parameters.AddWithValue("@CGPA", CollegeGPATextBox.Text);
+                    cmdIns5.Parameters.AddWithValue("@CGraduate", CollegeGradCheckBox.Checked);
+                    cmdIns5.Parameters.AddWithValue("@CollegeGradYear", CollegeGradYearTextBox.Text);
+                    cmdIns5.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+                    
+                    cmdIns5.ExecuteNonQuery();
+                    cmdIns5.Parameters.Clear();
+                    //
+                    //Add to the References Table
+                    //
+                    SqlCommand cmdIns6 = new SqlCommand(reference_insert, conn);
+                    cmdIns6.Parameters.AddWithValue("@RName", RName1TextBox.Text);
+                    cmdIns6.Parameters.AddWithValue("@RPhone", RPhone1TextBox.Text);
+                    cmdIns6.Parameters.AddWithValue("@REmail", REmail1TextBox.Text);
+                    cmdIns6.Parameters.AddWithValue("@Relationship", Relationship1TextBox.Text);
+                    cmdIns6.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+                    
+                    cmdIns6.ExecuteNonQuery();
+                    cmdIns6.Parameters.Clear();
+                    //
+                    SqlCommand cmdIns7 = new SqlCommand(reference_insert, conn);
+                    cmdIns7.Parameters.AddWithValue("@RName", RName2TextBox.Text);
+                    cmdIns7.Parameters.AddWithValue("@RPhone", RPhone2TextBox.Text);
+                    cmdIns7.Parameters.AddWithValue("@REmail", REmail2TextBox.Text);
+                    cmdIns7.Parameters.AddWithValue("@Relationship", Relationship2TextBox.Text);
+                    cmdIns7.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+                    
+                    cmdIns7.ExecuteNonQuery();
+                    cmdIns7.Parameters.Clear();
+                    ////
+                    SqlCommand cmdIns8 = new SqlCommand(reference_insert, conn);
+                    cmdIns8.Parameters.AddWithValue("@RName", RName3TextBox.Text);
+                    cmdIns8.Parameters.AddWithValue("@RPhone", RPhone3TextBox.Text);
+                    cmdIns8.Parameters.AddWithValue("@REmail", REmail3TextBox.Text);
+                    cmdIns8.Parameters.AddWithValue("@Relationship", Relationship3TextBox.Text);
+                    cmdIns8.Parameters.AddWithValue("@ApplicantId", ApplicantId);
+                    
+
+                    cmdIns8.ExecuteNonQuery();
+                    cmdIns8.Parameters.Clear();
+                    
+                   //Dispose method to free up memory used by the application.
+
+                    cmdIns.Dispose();
+                    cmdIns = null;
+                    cmdIns1.Dispose();
+                    cmdIns1 = null;
+                    cmdIns2.Dispose();
+                    cmdIns2 = null;
+                    cmdIns3.Dispose();
+                    cmdIns3 = null;
+                    cmdIns4.Dispose();
+                    cmdIns4 = null;
+                    cmdIns5.Dispose();
+                    cmdIns5 = null;
+                    cmdIns6.Dispose();
+                    cmdIns6 = null;
+                    cmdIns7.Dispose();
+                    cmdIns7 = null;
+                    cmdIns8.Dispose();
+                    cmdIns8 = null; 
                 }
-                else
+                catch (Exception ex)
                 {
-                    OkToContact3 = "No";
+                    throw new Exception(ex.ToString(), ex);
                 }
-                command.Parameters.AddWithValue("@_okToContact", OkToContact3);
+                finally
+                {
+                    
+                    conn.Close();
+                }
 
-                //*****************************************************************************************************
-                //Insert information into the References database
-                //Reference 1 Name
-                string RName1 = RName1TextBox.Text;
-                command.Parameters.AddWithValue("@r_Name", RName1);
-                //Reference 1 Phone
-                string RPhone1 = RPhone1TextBox.Text;
-                command.Parameters.AddWithValue("@r_Phone", RPhone1);
-                //Reference 1 Email
-                string REmail1 = REmail1TextBox.Text;
-                command.Parameters.AddWithValue("@r_Email", REmail1);
-                //Reference 1 Relationship
-                string Relationship1 = Relationship1TextBox.Text;
-                command.Parameters.AddWithValue("@_relationship", Relationship1);
-                //
-                //
-                //
-                //Reference 2 Name
-                string RName2 = RName2TextBox.Text;
-                command.Parameters.AddWithValue("@r_Name", RName2);
-                //Reference 2 Phone
-                string RPhone2 = RPhone2TextBox.Text;
-                command.Parameters.AddWithValue("@r_Phone", RPhone2);
-                //Reference 2 Phone Number
-                string REmail2 = REmail2TextBox.Text;
-                command.Parameters.AddWithValue("@r_Email", REmail2);
-                //Reference 2 Email
-                string Relationship2 = Relationship2TextBox.Text;
-                command.Parameters.AddWithValue("@_relationship", Relationship2);
-                //Reference 2 Relationship
-                //
-                //Reference 2 Name
-                string RName3 = RName3TextBox.Text;
-                command.Parameters.AddWithValue("@r_Name", RName3);
-                //Reference 2 Phone
-                string RPhone3 = RPhone3TextBox.Text;
-                command.Parameters.AddWithValue("@r_Phone", RPhone3);
-                //Reference 3 Email
-                string REmail3 = REmail3TextBox.Text;
-                command.Parameters.AddWithValue("@r_Email", REmail3);
-                //Reference 3 Relationship
-                string Relationship3 = Relationship3TextBox.Text;
-                command.Parameters.AddWithValue("@_relationship", Relationship3);
-
-
-
-
-                //Execute the command.
-                command.ExecuteNonQuery();
-                //Close the connection.
-                
                 conn.Close();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Application Submission Successful')", true);
+
+
+                
+                
+                }
             }
-
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            //Read from database. 
-
         }
     }
-}
+
 
     
 
